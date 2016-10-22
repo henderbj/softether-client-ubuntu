@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  vpnclient:
+    build: ./
+    image: softether:client
+    cap_add:
+      - NET_ADMIN
+    env_file:
+      - ./.env
+

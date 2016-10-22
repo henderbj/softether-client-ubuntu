@@ -1,0 +1,6 @@
+PasswordSet $PASSWORDSET /REMOTEONLY:no
+NicCreate se
+AccountCreate acc1 /SERVER:$SERVER:$PORT /HUB:$VHUB /USERNAME:$VPNUSER /NICNAME:se
+AccountPasswordSet acc1 /PASSWORD:$VPNPASS /TYPE:radius
+AccountConnect acc1
+
